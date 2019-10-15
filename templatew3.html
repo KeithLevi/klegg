@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<title>Egg</title>
+<!--
+  This file is a modification of a W3Schools template.  For the Egg Honors Project you can add JavaScript event handlers that watch for clicks 
+  on the sidebar topics or the 'Try it Yourself' button.  The former should put some explanatory text into the output div and some sample code into the 
+  code div.  When they click the Try it Yourself button it should get the code string in the code div, interpret it with Egg, and then put the resulting 
+  expression into the output window.  
+
+  There are many ways you can do this or something similar.  You do not have to use this template page.
+
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="egg.js" ></script>
+<script src="eggHandlers.js" defer ></script>
+<body>
+
+    
+<div class="w3-sidebar w3-collapse w3-white w3-animate-left w3-large" style="z-index:3;width:300px;" id="mySidebar">
+
+<div id="nav01" class="w3-bar-block">
+  <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" href="javascript:void(0)" onclick="w3_close()">×</a>
+  <a id="aboutEgg" class="w3-bar-item w3-button" href="#">About Egg</a>
+  <a id="topic1" class="w3-bar-item w3-button" href="#">Topic 1</a>
+  <a id="topic2"  class="w3-bar-item w3-button" href="#">Topic 2</a>
+  <a id="topic3"  class="w3-bar-item w3-button" href="#">Topic 3</a>
+  <a id="topic4"  class="w3-bar-item w3-button" href="#">Topic 4</a>
+</div>
+
+<div id="nav02"></div><div id="nav03"></div>
+
+</div>
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:300px;"> 
+
+<div class="w3-top w3-theme w3-large w3-hide-large">
+  <i class="fa fa-bars w3-button w3-teal w3-xlarge" onclick="w3_open()"></i>
+</div>
+
+<header class="w3-container w3-theme w3-padding-24 w3-center">
+  <h1 class="w3-xxxlarge w3-padding-16">CS303: Function and Object-Oriented Programming</h1>
+</header>
+
+<div class="w3-container w3-padding-large w3-section w3-light-grey">
+  <h1 class="w3-jumbo">Egg</h1>
+  <p class="w3-xlarge">An Expression Based Language</p>
+  <p class="w3-large"> 
+  <textarea id="inputDiv" class="w3-input" placeholder="Write an Egg expression here .." style="height:200px; width: 90%">
+    write an egg expression here
+  </textarea>
+   </p> 
+  <a id="tryBtn" class="w3-button w3-theme w3-hover-white" >Try it Yourself</a>
+</div>
+
+<div class="w3-container w3-padding-large w3-section w3-light-grey">
+  <p class="w3-xlarge">View the output here</p>
+
+
+  <p><div id="outputDiv" class="w3-code jsHigh notranslate" style="height: 200px">
+
+  </div></p>
+
+</div>
+
+<footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity">
+  <p><nav>
+  <a href="/forum/default.asp" target="_blank">FORUM</a> |
+  <a href="/about/default.asp" target="_top">ABOUT</a>
+  </nav></p>
+</footer>
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+openNav("nav01");
+function openNav(id) {
+  document.getElementById("nav01").style.display = "none";
+  document.getElementById("nav02").style.display = "none";
+  document.getElementById("nav03").style.display = "none";
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+<script>
+w3CodeColor();
+</script>
+
+</body>
+</html> 

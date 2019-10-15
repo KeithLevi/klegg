@@ -322,7 +322,7 @@ egg.topScope.element = function (array, n) {
 };
 
 /* test if array is working */
-console.log('Test the array.  Expecting 6: ');
+console.log("Test the array.  Expecting 6: ");
 egg.run(`
 do(define(sum, fun(array,
      do(define(i, 0),
