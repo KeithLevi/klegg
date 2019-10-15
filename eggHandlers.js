@@ -1,6 +1,12 @@
 "use strict";
 /* global egg */
 
+/**
+ * This file, eggHandlers.js, demonstrates how to set up event handlers in a separate javascript file, and how to run Egg and display the results.
+ * This is called "unobtrusive JavaScript".  It removes the JavaScript code from the HTML page, which makes both the HTML and JavaScript code easier to 
+ * understand and update.
+ */
+
 {
     const outputDiv = document.getElementById("outputDiv");
     const inputDiv = document.getElementById("inputDiv");
